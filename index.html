@@ -11,6 +11,21 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.all-reviews{
+				
+				display: inline-block;
+				color: #fefefe;
+				background: rgb(39, 119, 224);
+				text-decoration: none;
+				line-height: 1;
+				padding: 12px 24px;
+				margin: 20px 0;
+				transition: all .5s ease;
+				cursor: pointer;
+				border-radius: 6px;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -44,10 +59,10 @@
 							<li><a href="faq.html">FAQs</a></li>
 						</ul>
 						<ul class="icons">
-							<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li> -->
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<!-- <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li> -->
 						</ul>
 					</nav>
 
@@ -64,11 +79,25 @@
 
 										Westchester Boxing Club is the premier fitness boxing gym, offering a clean and welcoming setting that focuses on getting fit through the art of boxing. At WBC, we incorporate the mental, physical, and emotional challenges of boxing into a fitness regimen and lifestyle. By providing personal training, high-energy group classes and small group training that are designed to test your limits and help you exceed your own expectations, WBC uncovers what it truly means to realize your potential. Our trainers are passionate about cultivating an environment where clients can improve endurance and strength, sculpt a lean and toned physique, and learn a complex skill set through the art of boxing. With every punch, we inspire and unleash the inner warrior that fights hard and dreams bigger.</span>
 								</header>
+
+								<div class="box" style="text-align: center;">
+
+                                    <!-- Reviews -->
+                                    <h3>Reviews</h3>
+                                    
+                                        <div id="google-reviews">
+                                            Reviews
+                                        </div>
+                                    
+										<a target="_blank" href="https://www.google.com/search?q=westchester+boxing+club+white+plains&rlz=1C5CHFA_enUS887US893&oq=westche&aqs=chrome.0.69i59j46j69i59j69i57j0l2j46j0.1912j0j8&sourceid=chrome&ie=UTF-8#lrd=0x89c295b4d01cec0f:0x3a185f1d0c6a3c28,1,,,"><div class="all-reviews">See All Our Google Reviews</div></a>
+
+								</div>
 								
 							</article>
 
 						<!-- Posts -->
 							<section class="posts">
+
 								<article>
 									<header>
 										<span class="date">April 24, 2017</span>
@@ -224,6 +253,23 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+		<!-- Google Reviews Scripts -->
+		<link rel="stylesheet" href="https://cdn.rawgit.com/stevenmonson/googleReviews/master/google-places.css">
+		
+		<script src="https://cdn.jsdelivr.net/gh/stevenmonson/googleReviews@6e8f0d794393ec657dab69eb1421f3a60add23ef/google-places.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDwotzRle1RVyn2Q0ScxLTOy8FrDozVEc8&libraries=places"></script>
+
+		<script>
+		jQuery(document).ready(function( $ ) {
+		$("#google-reviews").googlePlaces({
+				placeId: 'ChIJD-wc0LSVwokRKDxqDB1fGDo' //Find placeID @: https://developers.google.com/places/place-id
+			, render: ['reviews']
+			, min_rating: 4
+			, max_rows:4
+		});
+		});
+		</script>
+
 
 	</body>
 </html>
